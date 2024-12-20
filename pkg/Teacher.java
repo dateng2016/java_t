@@ -8,6 +8,6 @@ public class Teacher extends Human {
     }
 
     public double getSalary() {
-        return salary;
+        return salary; 
     }
 }
