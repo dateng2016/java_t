@@ -1,27 +1,20 @@
-import pkg.Human;
+import java.util.ArrayList;
 
 public class Scratch {
-    public static void main(String[] args) throws ClassNotFoundException {
-        String classFullName = "pkg.Human";
 
-        // System.out.println(Class.forName("pkg.Human"));;
+    public static void main(String[] args) {
+        ArrayList<String> ls = new ArrayList<>();
+        ls.add("John");
+        ls.add("Wick");
 
-        // Method 1
-        Class clazz1 = Class.forName(classFullName);
+        ArrayList<String> ls2 = new ArrayList<>();
+        for (var name : ls) {
+            if (name.startsWith("Joh")) {
+                ls2.add(name);
+            }
+        }
 
-        System.out.println(clazz1);
-
-        // Method 2
-        Class clazz2 = Human.class;
-
-        System.out.println(clazz1 == clazz2);
-
-        // Method 3
-        Human h = new Human();
-        Class clazz3 = h.getClass();
-
-        System.out.println(clazz1 == clazz3);
-
+        System.out.println(ls2);
 
     }
 }
