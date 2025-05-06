@@ -5,4 +5,4 @@ BigDecimal
 Regex
 
 Exceptions
-IO Stream Starting Episode 20 and beyond
+IO Stream episode 32

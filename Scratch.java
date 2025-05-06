@@ -1,17 +1,22 @@
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.Buffer;
 
 public class Scratch {
     public static void main(String[] args) throws Exception {
         // test1();
         // test2();
         // test3();
-        test4();
+        // test4();
+        // test5();
+        test6();
     }
 
     static void test1() throws IOException {
@@ -59,7 +64,29 @@ public class Scratch {
         bos.close();
     }
 
-    static void test4() throws IOException{
+    static void test4() throws IOException {
+        BufferedReader br = new BufferedReader(new FileReader("a.txt"));
+        BufferedWriter bw = new BufferedWriter(new FileWriter("a_copy.txt"));
+
+        String line;
+        while ((line = br.readLine()) != null) {
+            System.out.println(line);
+        }
+        line = br.readLine();
+        System.out.println(line);
+
+        br.close();
+        bw.close();
+    }
+
+    static void test5() throws IOException {
+        BufferedWriter bw = new BufferedWriter(new FileWriter("b.txt"));
+        bw.write("Hi, how are you doing?");
+        bw.newLine();
+        bw.close();
+    }
+
+    static void test6() {
     }
 
 }
